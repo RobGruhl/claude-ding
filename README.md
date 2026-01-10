@@ -71,6 +71,16 @@ Add to your `~/.claude/settings.json`:
             "timeout": 5
           }
         ]
+      },
+      {
+        "matcher": "ExitPlanMode",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "~/.claude/sounds/play-random-question.sh",
+            "timeout": 5
+          }
+        ]
       }
     ],
     "PermissionRequest": [
@@ -101,6 +111,7 @@ Ask Claude: "Add the hooks from claude-ding README to my settings.json"
 |------|-------|------|
 | `Stop` | Celebratory | Claude finishes a task |
 | `PostToolUse` (AskUserQuestion) | Question | Claude asks you something |
+| `PostToolUse` (ExitPlanMode) | Question | Claude presents a plan for approval |
 | `PermissionRequest` | Question | Claude needs permission |
 
 ## Requirements
